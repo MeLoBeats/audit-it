@@ -1,5 +1,5 @@
 import { icons } from "lucide-preact"
-import Icon from "./Icon"
+import { Icon } from "./Icon"
 
 type ServiceCardProps = {
   icon: keyof typeof icons

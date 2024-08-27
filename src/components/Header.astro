@@ -2,6 +2,7 @@
 import type { NavLink } from "../../index.d";
 import useContent from "../utils/useContent";
 import AppLogo from "./AppLogo.astro";
+import Burger from "./preact/Burger";
 const title = useContent("global.title")
 const navLinks = useContent("navbar.items")
 ---
@@ -12,13 +13,16 @@ const navLinks = useContent("navbar.items")
             <AppLogo />
             <h1 class="text-2xl font-bold ml-2 hidden sm:block">{title}</h1>
         </div>
-       <ul>
+       <ul class="hidden sm:flex">
             {navLinks.map((link: NavLink) => (
                 <li class="inline-block ml-4">
                     <a href={link.link} class="text-black font-normal hover:underline underline-offset-8 transition">{link.title}</a>
                 </li>
             ))}
        </ul>
+       <div class="flex sm:hidden">
+           <Burger client:load />
+        </div>
     </nav>
 </header>
 

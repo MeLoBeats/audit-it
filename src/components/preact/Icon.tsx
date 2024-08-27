@@ -1,16 +1,23 @@
-import { icons, type LucideIcon as LucideIconType } from "lucide-preact"
+import { icons, type LucideProps } from "lucide-preact"
+import type { ComponentProps } from "preact"
 
-interface IconProps {
-  name: keyof typeof icons
-  color?: string
-  size?: number | string
-  class?: string
+type IconName = keyof typeof icons
+
+type SVGAttributes = ComponentProps<"svg">
+
+interface IconProps extends Omit<LucideProps, "ref"> {
+  name: IconName
 }
 
-const Icon = ({ name, color, size, class: className }: IconProps) => {
-  const LucideIcon: LucideIconType = icons[name]
+export function Icon({ name, ...props }: IconProps) {
+  const LucideIcon = icons[name]
 
-  return <LucideIcon color={color} size={size} class={className} />
+  if (!LucideIcon) {
+    console.warn(`Icon "${name}" not found`)
+    return null
+  }
+
+  return <LucideIcon {...props} />
 }
 
-export default Icon
+export type { IconName }
