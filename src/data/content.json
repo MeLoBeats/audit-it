@@ -1,0 +1,59 @@
+{
+  "global": {
+    "title": "StockData"
+  },
+  "navbar": {
+    "items": [
+      {
+        "title": "Accueil",
+        "link": "#"
+      },
+      {
+        "title": "Services",
+        "link": "#services"
+      },
+      {
+        "title": "A propos",
+        "link": "/a-propos"
+      },
+      {
+        "title": "Contact",
+        "link": "/contact"
+      }
+    ]
+  },
+  "heroBanner": {
+    "title": "Transformez votre IT avec l'expertise StockData",
+    "description": "StockData est un service de stockage de données de valeur ajoutée à la plateforme de stockage de données de valeur de l'Etat.",
+    "primaryButton": "Commencer maintenant",
+    "secondaryButton": "En savoir plus"
+  },
+  "servicesTitle": "Nos Services",
+  "services": [
+    {
+      "icon": "Database",
+      "title": "Externalisation de Backup",
+      "description": "Des solutions de sauvegarde fiables et sécurisées pour vos données critiques."
+    },
+    {
+      "icon": "CloudCog",
+      "title": "Migration Cloud",
+      "description": "Une transition fluide de vos données vers le cloud avec une expertise en Azure et AWS."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Cybersécurité & Pentest",
+      "description": "Protégez vos actifs numériques avec des audits de sécurité et des tests d'intrusion avancés."
+    },
+    {
+      "icon": "Server",
+      "title": "Mise en place de Landing Zone Cloud",
+      "description": "Créez des environnements cloud sécurisés et scalables dès la base."
+    },
+    {
+      "icon": "Lock",
+      "title": "Services Clouds Managés",
+      "description": "Supervision, gestion des incidents, automatisation des tâches, et optimisation continue pour garantir la performance de votre SI."
+    }
+  ]
+}
