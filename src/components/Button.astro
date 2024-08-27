@@ -1,0 +1,42 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { twMerge } from "tailwind-merge";
+
+interface ButtonProps extends HTMLAttributes<'button'> {
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  color?: string;
+}
+
+const { 
+  variant = 'primary', 
+  size = 'md', 
+  color, 
+  class: className, 
+  ...rest
+} = Astro.props as ButtonProps;
+
+const variantStyles: Record<NonNullable<ButtonProps['variant']>, string> = {
+  primary: "bg-white text-black hover:bg-gray-100",  
+  secondary: "bg-black text-white border-transparent hover:border-white border",
+  outline: "bg-transparent border border-black text-black hover:bg-gray-100",
+};
+
+const sizeStyles: Record<NonNullable<ButtonProps['size']>, string> = {
+  sm: "px-4 py-2 text-sm",
+  md: "px-6 py-3 text-base",
+  lg: "px-8 py-4 text-lg",
+};
+
+const buttonStyle = twMerge(
+  "inline-block font-medium rounded-md",
+  variantStyles[variant],
+  sizeStyles[size],
+  color && `text-${color} border-transparent border-2 border-black`,
+  className
+);
+---
+
+<button class={buttonStyle} {...rest}>
+  <slot />
+</button>
