@@ -1,1 +1,1 @@
-BUILD_TARGET=build docker-compose up --build web
+BUILD_TARGET=build docker compose up --build web
