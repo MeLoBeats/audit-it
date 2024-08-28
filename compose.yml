@@ -3,7 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: ${BUILD_TARGET:-runtime}
     ports:
       - "8081:80"
     volumes:
-      - ./src/data/content.json:/usr/local/apache2/htdocs/content.json
+      - ./src/data/content.json:/usr/loc
