@@ -1,0 +1,21 @@
+---
+import type { Service } from "../.."
+import useContent from "../utils/useContent"
+import ServiceCard from "./preact/ServiceCard"
+
+const services = useContent("services") as Service[]
+const servicesTitle = useContent("servicesTitle")
+---
+
+<section id="services" class="w-full bg-gradient-to-br from-gray-100 to-gray-300 min-h-[450px] pb-14 px-5">
+    <div class="flex flex-col h-full w-full gap-5 pt-14">
+        <h1 class="text-2xl my-5 sm:text-4xl text-center mb-14 font-bold text-black">
+            {servicesTitle}
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {services.map((service) => (
+                <ServiceCard {...service} />
+            ))}
+        </div>
+    </div>
+</section>
