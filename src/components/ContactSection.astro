@@ -1,0 +1,66 @@
+---
+import FadeIn from "./react/FadeIn"
+import GradientText from "./ui/gradient-text"
+import { Label } from "./ui/label"
+import { Input } from "./ui/input"
+import { Textarea } from "./ui/textarea"
+import { Button } from "./ui/button"
+import { motion } from "framer-motion"
+---
+
+<section
+  class="min-h-[70vh] bg-gradient-to-t from-60% from-white to-[#fcf3ff] mt-[100px] pb-14 px-5"
+>
+  <h1 class="text-2xl my-5 sm:text-4xl text-center mb-14 font-bold text-black">
+    <FadeIn client:visible duration={0.6}>
+      <GradientText> Nous contacter </GradientText>
+    </FadeIn>
+  </h1>
+  <form method="post" action="https://formspree.io/f/xovaokrg">
+    <!-- Generate contact form here using Shadcn -->
+    <div class="flex flex-col items-center w-2/3 mx-auto gap-6">
+      <div class="grid grid-cols-1 w-full gap-5">
+        <div class="form-control">
+          <Label htmlFor="name"> Votre nom </Label>
+          <Input
+            id="name"
+            name="name"
+            type="text"
+            className="bg-white"
+            placeholder="John Doe"
+          />
+        </div>
+        <div class="form-control">
+          <Label htmlFor="email"> Votre adresse mail </Label>
+          <Input
+            id="email"
+            name="email"
+            className="bg-white"
+            type="email"
+            placeholder="votre@mail.fr"
+          />
+        </div>
+        <motion.div
+          className="form-control"
+          initial={{ opacity: 0, x: -20, y: 20 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          client:load
+          transition={{ duration: 0.3, delay: 0.2 }}
+        >
+          <Label htmlFor="message"> Votre message </Label>
+          <Textarea
+            id="message"
+            name="message"
+            className="bg-white"
+            cols={30}
+            rows={10}
+            placeholder="Votre message"
+          />
+        </motion.div>
+      </div>
+      <Button variant="default" type="submit" size="lg" className="mt-5 w-full">
+        Envoyer
+      </Button>
+    </div>
+  </form>
+</section>

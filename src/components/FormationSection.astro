@@ -1,0 +1,48 @@
+---
+import useContent from "../utils/useContent"
+import FadeIn from "./react/FadeIn"
+import { FormationCard } from "./react/FormationCard"
+import { Button } from "./ui/button"
+import { motion } from "framer-motion"
+
+const formations = useContent("formations") as any[]
+const formationsTitle = useContent("formationsTitle")
+---
+
+<section
+  id="formations"
+  class="w-full bg-[#12151a] min-h-[90vh] z-10 transform transform-translate-y-0.5 pb-14 px-5"
+>
+  <div class="flex flex-col h-full w-full gap-5 pt-4">
+    <h1
+      class="text-2xl my-5 sm:text-4xl text-center mb-14 font-bold text-white"
+    >
+      <FadeIn client:visible duration={0.6}>
+        {formationsTitle}
+      </FadeIn>
+    </h1>
+    <div class="flex flex-col items-center gap-6">
+      <div class="grid grid-cols-2 w-full gap-5">
+        {
+          formations.slice(0, 6).map((formation) => (
+            <motion.div
+              key={formation.title}
+              initial={{ opacity: 0, x: -20, y: 20 }}
+              client:visible
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+            >
+              <FormationCard formation={formation} />
+            </motion.div>
+          ))
+        }
+      </div>
+      <a href="formations">
+        <Button variant="secondary" size="lg" className="mt-5">
+          Voir toutes les formations
+        </Button>
+      </a>
+    </div>
+  </div>
+</section>

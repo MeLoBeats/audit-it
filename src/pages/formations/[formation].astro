@@ -1,0 +1,105 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import useContent from "@/utils/useContent"
+import { sluggify } from "@/lib/utils"
+import type { Formation } from "index"
+import { motion } from "framer-motion"
+import { BarChart, ClockIcon } from "lucide-react"
+import { FaqCard } from "@/components/react/Faq"
+import { Badge } from "@/components/ui/badge"
+import { Tag } from "@/components/react/Tag"
+import FadeIn from "@/components/react/FadeIn"
+
+export function getStaticPaths() {
+  const formations = useContent("formations") as Formation[]
+  return formations.map((formation) => ({
+    params: { formation: sluggify(formation.title) },
+    props: { formation },
+  }))
+}
+
+const { formation }: { formation: Formation } = Astro.props
+---
+
+<BaseLayout
+  breadcrumbs={[
+    { title: "Accueil", href: "/" },
+    { title: "Formations", href: "/formations" },
+    {
+      title: formation.title,
+      href: `/formations/${sluggify(formation.title)}`,
+    },
+  ]}
+>
+  <div class="container mx-auto px-4">
+    <!-- Title -->
+    <h1 class="text-2xl my-5 pt-10 sm:text-4xl mb-5 font-bold text-black">
+      <FadeIn client:visible duration={0.6}>
+        {formation.title}
+      </FadeIn>
+    </h1>
+    <div class="flex items-center gap-2">
+      {
+        formation.tags.map((tag) => (
+          <FadeIn client:visible>
+            <Tag>{tag}</Tag>
+          </FadeIn>
+        ))
+      }
+    </div>
+    <!-- Icons -->
+    <div class="flex items-center justify-start gap-10 py-10">
+      <div class="flex items-center gap-6">
+        <ClockIcon className="h-6 w-6 text-blue-500" />
+        <p class="text-base">
+          {formation.duration}
+        </p>
+      </div>
+      <div class="flex items-center gap-6">
+        <BarChart className="h-6 w-6 text-green-500" />
+        <p class="">
+          {formation.level}
+        </p>
+      </div>
+    </div>
+    <!-- Description -->
+    <p class="text-lg text-black mb-14">
+      <FadeIn client:visible duration={0.6}>
+        {formation.longDescription}
+      </FadeIn>
+    </p>
+    <!-- Sommaire de la formation -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold my-4">Sommaire de la formation</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {
+          formation.summary.map((item, index) => (
+            <motion.li
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+              className="flex items-start space-x-4 text-lg gap-5"
+              client:load
+            >
+              <Badge
+                variant="default"
+                className="bg-white"
+                color="white"
+                className="mt-1"
+              >
+                0{index + 1}
+              </Badge>
+              <span>{item}</span>
+            </motion.li>
+          ))
+        }
+      </ul>
+    </div>
+    <!-- FAQ -->
+    <h1 class="text-2xl my-5 pt-10 sm:text-4xl mb-5 font-bold text-black">
+      FAQ
+    </h1>
+    <FaqCard client:load faq={formation.faq} />
+  </div>
+</BaseLayout>

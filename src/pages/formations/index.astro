@@ -1,0 +1,39 @@
+---
+import { FormationCard } from "@/components/react/FormationCard"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import useContent from "@/utils/useContent"
+import type { Formation } from "index"
+import { motion } from "framer-motion"
+const formations = useContent("formations") as Formation[]
+---
+
+<BaseLayout
+  breadcrumbs={[
+    { title: "Accueil", href: "/" },
+    { title: "Formations", href: "/formations" },
+  ]}
+>
+  <div class="container px-4 mx-auto">
+    <h1 class="text-2xl my-5 pt-10 sm:text-4xl mb-5 font-bold text-black">
+      Nos Formations
+    </h1>
+    <!-- Description -->
+    <p class="text-lg text-black mb-14">
+      Retrouvez nos formations en cours et à venir
+    </p>
+    <div class="grid grid-cols-1 gap-5 pb-14">
+      {
+        formations.map((formation, id) => (
+          <motion.div
+            client:load
+            initial={{ opacity: 0, x: -20, y: 20 }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.3, delay: id * 0.1 }}
+          >
+            <FormationCard client:load formation={formation} />
+          </motion.div>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

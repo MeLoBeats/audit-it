@@ -1,0 +1,43 @@
+---
+import useContent from "../utils/useContent"
+
+const title = useContent("global.title")
+const heroBanner = useContent("heroBanner")
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content={heroBanner.description || "Default description"}
+  />
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+  <title>{title || "StockData"}</title>
+
+  <!-- Open Graph tags for better social media sharing -->
+  <meta property="og:title" content={heroBanner.title || "Default Title"} />
+  <meta
+    property="og:description"
+    content={heroBanner.description || "Default description"}
+  />
+  <meta property="og:image" content={heroBanner.image || "/audit.png"} />
+  <meta
+    property="og:url"
+    content={globalThis.location?.href || "https://stockdata.com"}
+  />
+
+  <!-- Twitter Card tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={heroBanner.title || "Default Title"} />
+  <meta
+    name="twitter:description"
+    content={heroBanner.description || "Default description"}
+  />
+  <meta
+    name="twitter:image"
+    content={heroBanner.image || "/default-image.jpg"}
+  />
+  <title>StockData</title>
+</head>

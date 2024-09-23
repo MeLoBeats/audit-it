@@ -1,0 +1,71 @@
+---
+import "../assets/css/base.css"
+import "@fontsource/cabin"
+import HeadMeta from "@/components/HeadMeta.astro"
+import Footer from "@/components/react/Footer"
+import { Header } from "@/components/react/Header"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import { Slash } from "lucide-react"
+const {
+  breadcrumbs = [
+    {
+      title: "Accueil",
+      href: "/",
+    },
+  ],
+} = Astro.props as {
+  breadcrumbs?: { title: string; href: string }[]
+}
+---
+
+<html lang="fr">
+  <HeadMeta />
+  <body class="grid grid-rows-[min-content_1fr_min-content]">
+    <Header client:load />
+    <div class="container mx-auto px-4">
+      <Breadcrumb className="mt-5">
+        <BreadcrumbList>
+          {
+            breadcrumbs.length > 1 &&
+              breadcrumbs.map(({ title, href }, id) => (
+                <>
+                  <BreadcrumbItem>
+                    <BreadcrumbLink href={href}>{title}</BreadcrumbLink>
+                  </BreadcrumbItem>
+                  {id !== breadcrumbs.length - 1 && (
+                    <BreadcrumbSeparator>
+                      <Slash />
+                    </BreadcrumbSeparator>
+                  )}
+                </>
+              ))
+          }
+        </BreadcrumbList>
+      </Breadcrumb>
+    </div>
+    <main class="flex flex-col flex-1 overflow-hidden">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      // Add no opener no referrer to all links
+      document.querySelectorAll("a").forEach((link) => {
+        link.setAttribute("rel", "noreferrer noopener")
+      })
+    </script>
+  </body>
+</html>
+
+<style>
+  body {
+    background-image: url("/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>

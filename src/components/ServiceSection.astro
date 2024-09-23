@@ -1,21 +1,44 @@
 ---
 import type { Service } from "../.."
 import useContent from "../utils/useContent"
-import ServiceCard from "./preact/ServiceCard"
+import { ServiceCard } from "./react/ServiceCard"
+import GradientText from "./ui/gradient-text"
+import FadeIn from "./react/FadeIn"
+import { motion } from "framer-motion"
 
 const services = useContent("services") as Service[]
 const servicesTitle = useContent("servicesTitle")
 ---
 
-<section id="services" class="w-full bg-gradient-to-br from-gray-100 to-gray-300 min-h-[450px] pb-14 px-5">
-    <div class="flex flex-col h-full w-full gap-5 pt-14">
-        <h1 class="text-2xl my-5 sm:text-4xl text-center mb-14 font-bold text-black">
-            {servicesTitle}
-        </h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {services.map((service) => (
-                <ServiceCard {...service} />
-            ))}
-        </div>
+<section
+  id="services"
+  class="w-full bg-gradient-to-t from-60% from-white to-[#fcf3ff] mt-[250px] pb-14 px-5"
+>
+  <div class="flex flex-col h-full w-full gap-5 pt-4">
+    <h1
+      class="text-2xl my-5 sm:text-4xl text-center pb-10 mb-14 font-bold text-black"
+    >
+      <FadeIn client:visible duration={0.6}>
+        <GradientText>
+          {servicesTitle}
+        </GradientText>
+      </FadeIn>
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      {
+        services.map((service) => (
+          <motion.div
+            key={service.title}
+            initial={{ opacity: 0, x: -20, y: 20 }}
+            client:visible
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+          >
+            <ServiceCard client:load service={service} />
+          </motion.div>
+        ))
+      }
     </div>
+  </div>
 </section>

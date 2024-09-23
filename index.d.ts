@@ -1,4 +1,4 @@
-import { icons } from "lucide-preact";
+import  type { icons } from "lucide-react"; 
 
 export type NavLink = {
     title: string;
@@ -6,7 +6,23 @@ export type NavLink = {
 }
 
 export type Service = {
-    icon: keyof typeof icons;
+    icon: icons;
     title: string;
     description: string;
+}
+
+export type Formation = {
+    title: string;
+    description: string;
+    tags: string[];
+    level: string;
+    duration: string;
+    longDescription: string;
+    summary: string[];
+    faq: Faq[];
+}
+
+export type Faq = {
+    question: string;
+    answer: string;
 }

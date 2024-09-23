@@ -5,30 +5,26 @@
   "navbar": {
     "items": [
       {
-        "title": "Accueil",
-        "link": "#"
-      },
-      {
-        "title": "A propos",
-        "link": "#a-propos"
-      },
-      {
         "title": "Services",
         "link": "#services"
       },
       {
-        "title": "Contact",
-        "link": "/contact"
+        "title": "Formations",
+        "link": "#formations"
+      },
+      {
+        "title": "A propos",
+        "link": "#a-propos"
       }
     ]
   },
   "heroBanner": {
-    "title": "Transformez votre IT avec l'expertise StockData",
+    "title": "Transformez votre IT avec l'expertise",
     "description": "StockData est un service de stockage de données de valeur ajoutée à la plateforme de stockage de données de valeur de l'Etat.",
     "primaryButton": "Commencer maintenant",
     "secondaryButton": "En savoir plus"
   },
-  "servicesTitle": "Nos Services",
+  "servicesTitle": "Découvrez nos services",
   "services": [
     {
       "icon": "Database",
@@ -54,6 +50,229 @@
       "icon": "Lock",
       "title": "Services Clouds Managés",
       "description": "Supervision, gestion des incidents, automatisation des tâches, et optimisation continue pour garantir la performance de votre SI."
+    }
+  ],
+  "formationsTitle": "Nos formations",
+  "formations": [
+    {
+      "title": "Techniques de prise de parole en public",
+      "description": "Améliorez vos compétences en communication orale pour des présentations efficaces",
+      "tags": ["Communication", "Oral", "Présentation"],
+      "level": "Facile",
+      "duration": "2 Jours",
+      "longDescription": "Cette formation intensive vous permettra de maîtriser les techniques essentielles de la prise de parole en public. Vous apprendrez à structurer votre discours, à gérer votre stress, à utiliser efficacement votre voix et votre langage corporel, et à captiver votre auditoire. Des exercices pratiques et des mises en situation vous aideront à gagner en confiance et en impact.",
+      "summary": [
+        "Les fondamentaux de la communication orale",
+        "Structuration du discours et storytelling",
+        "Gestion du stress et des émotions",
+        "Techniques vocales et corporelles",
+        "Interaction avec l'auditoire",
+        "Utilisation efficace des supports visuels"
+      ],
+      "faq": [
+        {
+          "question": "Cette formation convient-elle aux débutants ?",
+          "answer": "Oui, cette formation est conçue pour tous les niveaux, y compris les débutants. Nous adaptons les exercices en fonction de l'expérience de chaque participant."
+        },
+        {
+          "question": "Y a-t-il un nombre maximum de participants ?",
+          "answer": "Oui, nous limitons les groupes à 12 personnes pour garantir un accompagnement personnalisé et suffisamment de temps de pratique pour chacun."
+        },
+        {
+          "question": "Faut-il préparer quelque chose avant la formation ?",
+          "answer": "Il est recommandé de réfléchir à une présentation courte (5 minutes) sur un sujet de votre choix, que vous pourrez travailler pendant la formation."
+        }
+      ]
+    },
+    {
+      "title": "Administration Windows Server",
+      "description": "Maîtrisez l'administration des serveurs Windows et les services associés",
+      "tags": ["Windows", "Administration", "Système", "Réseau"],
+      "level": "Intermédiaire",
+      "duration": "5 Jours",
+      "longDescription": "Cette formation approfondie vous permettra de maîtriser l'administration de Windows Server dans un environnement d'entreprise. Vous apprendrez à installer, configurer et gérer les principaux services de Windows Server, y compris Active Directory, DNS, DHCP, et les stratégies de groupe. Vous découvrirez également les bonnes pratiques en matière de sécurité et de maintenance du système.",
+      "summary": [
+        "Installation et configuration de Windows Server",
+        "Gestion des utilisateurs et des groupes avec Active Directory",
+        "Configuration et gestion des services réseau (DNS, DHCP)",
+        "Mise en place et gestion des stratégies de groupe",
+        "Sécurisation de l'infrastructure Windows Server",
+        "Surveillance et maintenance du système"
+      ],
+      "faq": [
+        {
+          "question": "Quels sont les prérequis pour suivre cette formation ?",
+          "answer": "Une connaissance de base de l'environnement Windows et des notions de réseau sont recommandées. Une expérience en tant qu'utilisateur avancé de Windows est un plus."
+        },
+        {
+          "question": "La formation inclut-elle des travaux pratiques ?",
+          "answer": "Oui, la formation comprend de nombreux ateliers pratiques sur des machines virtuelles pour mettre en application les concepts appris."
+        },
+        {
+          "question": "Quelle version de Windows Server est utilisée dans la formation ?",
+          "answer": "Nous utilisons la dernière version stable de Windows Server, mais nous abordons également les différences avec les versions précédentes couramment utilisées en entreprise."
+        }
+      ]
+    },
+    {
+      "title": "Suite Office Avancée",
+      "description": "Approfondissez vos connaissances des outils Office avec des fonctionnalités avancées",
+      "tags": ["Bureautique", "Office", "Excel", "Word", "PowerPoint"],
+      "level": "Intermédiaire",
+      "duration": "4 Jours",
+      "longDescription": "Cette formation avancée vous permettra de maîtriser les fonctionnalités complexes de la suite Microsoft Office. Vous apprendrez à utiliser des formules avancées dans Excel, à créer des documents longs et structurés dans Word, et à concevoir des présentations dynamiques et interactives dans PowerPoint. Vous découvrirez également comment automatiser des tâches répétitives et comment collaborer efficacement sur des documents partagés.",
+      "summary": [
+        "Excel : formules avancées, tableaux croisés dynamiques, macros",
+        "Word : styles avancés, table des matières, publipostage",
+        "PowerPoint : animations complexes, intégration multimédia, présentation interactive",
+        "Automatisation avec VBA",
+        "Collaboration et partage de documents",
+        "Intégration entre les différents outils de la suite Office"
+      ],
+      "faq": [
+        {
+          "question": "Quel niveau de connaissance d'Office est nécessaire ?",
+          "answer": "Cette formation s'adresse aux utilisateurs ayant déjà une bonne maîtrise des fonctions de base de la suite Office. Une expérience préalable avec Excel, Word et PowerPoint est requise."
+        },
+        {
+          "question": "La formation couvre-t-elle d'autres applications Office comme Outlook ou Access ?",
+          "answer": "Cette formation se concentre principalement sur Excel, Word et PowerPoint. Cependant, nous abordons brièvement l'intégration avec d'autres outils comme Outlook."
+        },
+        {
+          "question": "Faut-il apporter son propre ordinateur ?",
+          "answer": "Non, des postes de travail équipés de la dernière version de Microsoft Office sont fournis pour la formation. Vous pouvez cependant apporter votre ordinateur si vous préférez travailler sur votre propre machine."
+        }
+      ]
+    },
+    {
+      "title": "Conception de bases de données relationnelles",
+      "description": "Apprenez à concevoir des schémas de bases de données efficaces et normalisés",
+      "tags": ["Base de données", "Conception", "Modélisation"],
+      "level": "Intermédiaire",
+      "duration": "3 Jours",
+      "longDescription": "Cette formation vous permettra de maîtriser les concepts et les techniques de conception de bases de données relationnelles. Vous apprendrez à analyser les besoins en données d'une organisation, à créer des modèles conceptuels et logiques, et à mettre en œuvre des schémas de bases de données efficaces et normalisés. Vous découvrirez également les bonnes pratiques de modélisation et comment éviter les pièges courants de conception.",
+      "summary": [
+        "Introduction aux bases de données relationnelles",
+        "Analyse des besoins et collecte des exigences",
+        "Modélisation conceptuelle (diagrammes entité-association)",
+        "Modélisation logique et normalisation",
+        "Transformation du modèle logique en schéma physique",
+        "Optimisation de la conception pour les performances",
+        "Étude de cas pratique"
+      ],
+      "faq": [
+        {
+          "question": "Cette formation nécessite-t-elle des connaissances préalables en SQL ?",
+          "answer": "Une connaissance de base du SQL est un plus, mais pas obligatoire. La formation se concentre sur la conception plutôt que sur l'implémentation."
+        },
+        {
+          "question": "Quel logiciel de modélisation est utilisé pendant la formation ?",
+          "answer": "Nous utilisons principalement un outil de modélisation open-source, mais les concepts enseignés sont applicables à n'importe quel outil de modélisation de bases de données."
+        },
+        {
+          "question": "La formation aborde-t-elle les bases de données non relationnelles ?",
+          "answer": "La formation se concentre sur les bases de données relationnelles, mais nous discutons brièvement des différences avec les bases de données non relationnelles et des cas d'utilisation appropriés pour chaque type."
+        }
+      ]
+    },
+    {
+      "title": "Optimisation des performances des bases de données",
+      "description": "Techniques avancées pour améliorer les performances des requêtes et de l'indexation",
+      "tags": ["Base de données", "Performance", "Optimisation", "SQL"],
+      "level": "Avancé",
+      "duration": "4 Jours",
+      "longDescription": "Cette formation avancée vous enseignera les techniques d'optimisation des performances pour les bases de données relationnelles. Vous apprendrez à analyser et à optimiser les requêtes SQL complexes, à concevoir des index efficaces, et à ajuster les paramètres du serveur de base de données pour maximiser les performances. Vous découvrirez également des stratégies avancées de mise en cache, de partitionnement et de réplication pour gérer de grands volumes de données.",
+      "summary": [
+        "Analyse et optimisation des plans d'exécution des requêtes",
+        "Conception et gestion efficace des index",
+        "Optimisation des requêtes SQL complexes",
+        "Techniques de mise en cache et de matérialisation des vues",
+        "Partitionnement de tables pour améliorer les performances",
+        "Stratégies de réplication et de distribution de charge",
+        "Outils de surveillance et de diagnostic des performances",
+        "Étude de cas réels d'optimisation"
+      ],
+      "faq": [
+        {
+          "question": "Quels systèmes de gestion de bases de données sont couverts dans cette formation ?",
+          "answer": "La formation se concentre principalement sur MySQL et PostgreSQL, mais les concepts sont applicables à la plupart des SGBDR."
+        },
+        {
+          "question": "Quel niveau d'expérience en SQL est nécessaire ?",
+          "answer": "Cette formation s'adresse aux personnes ayant une solide expérience en SQL et une bonne compréhension des concepts de bases de données. Une expérience pratique en administration de bases de données est recommandée."
+        },
+        {
+          "question": "Y a-t-il des exercices pratiques pendant la formation ?",
+          "answer": "Oui, la formation comprend de nombreux exercices pratiques sur des bases de données de test, permettant aux participants d'appliquer les techniques d'optimisation sur des scénarios réalistes."
+        }
+      ]
+    },
+    {
+      "title": "Méthodologies Agiles et Scrum",
+      "description": "Découvrez les principes des méthodes agiles et leur application dans la gestion de projet",
+      "tags": ["Agile", "Scrum", "Gestion de projet"],
+      "level": "Intermédiaire",
+      "duration": "3 Jours",
+      "longDescription": "Cette formation vous permettra de comprendre en profondeur les principes et pratiques des méthodologies agiles, en mettant l'accent sur le framework Scrum. Vous apprendrez à planifier, exécuter et suivre des projets agiles, à faciliter les cérémonies Scrum, et à promouvoir une culture agile au sein de votre équipe. La formation combine théorie et ateliers pratiques pour vous donner une expérience concrète de l'agilité.",
+      "summary": [
+        "Introduction aux valeurs et principes agiles",
+        "Présentation détaillée du framework Scrum",
+        "Rôles et responsabilités dans une équipe Scrum",
+        "Planification et estimation agile",
+        "Gestion du backlog et des sprints",
+        "Facilitation des cérémonies Scrum",
+        "Outils et métriques pour le suivi de projets agiles",
+        "Scaling agile pour les grandes organisations",
+        "Étude de cas et simulations de projets agiles"
+      ],
+      "faq": [
+        {
+          "question": "Cette formation prépare-t-elle à une certification Scrum ?",
+          "answer": "Bien que la formation couvre tous les concepts nécessaires, elle n'est pas directement alignée sur une certification spécifique. Cependant, elle constitue une excellente base pour ceux qui souhaitent passer une certification ultérieurement."
+        },
+        {
+          "question": "Faut-il avoir une expérience en gestion de projet pour suivre cette formation ?",
+          "answer": "Une expérience en gestion de projet est un plus, mais pas obligatoire. La formation convient aussi bien aux débutants qu'aux professionnels expérimentés souhaitant transition vers l'agile."
+        },
+        {
+          "question": "La formation aborde-t-elle d'autres méthodologies agiles que Scrum ?",
+          "answer": "Bien que Scrum soit le focus principal, nous abordons brièvement d'autres méthodes agiles comme Kanban et Extreme Programming (XP) pour donner une vue d'ensemble de l'écosystème agile."
+        }
+      ]
+    },
+    {
+      "title": "Sécurité des infrastructures Cloud",
+      "description": "Apprenez à sécuriser vos déploiements cloud contre les menaces modernes",
+      "tags": ["Cloud", "Sécurité", "Azure", "AWS", "GCP"],
+      "level": "Avancé",
+      "duration": "4 Jours",
+      "longDescription": "Cette formation avancée vous enseignera les meilleures pratiques et techniques pour sécuriser efficacement vos infrastructures cloud. Vous apprendrez à identifier et à atténuer les risques de sécurité spécifiques au cloud, à mettre en œuvre des contrôles de sécurité robustes, et à utiliser les outils de sécurité natifs des principaux fournisseurs de cloud (AWS, Azure, GCP). La formation couvre également les aspects de conformité et de gouvernance essentiels pour les déploiements cloud en entreprise.",
+      "summary": [
+        "Fondamentaux de la sécurité cloud et modèles de responsabilité partagée",
+        "Gestion des identités et des accès dans le cloud",
+        "Sécurisation des réseaux et du trafic dans les environnements cloud",
+        "Chiffrement et protection des données dans le cloud",
+        "Sécurité des conteneurs et des architectures serverless",
+        "Détection et réponse aux incidents de sécurité dans le cloud",
+        "Outils de sécurité natifs d'AWS, Azure et GCP",
+        "Conformité et audit dans les environnements cloud",
+        "Automatisation de la sécurité et Infrastructure as Code",
+        "Étude de cas réels et exercices pratiques"
+      ],
+      "faq": [
+        {
+          "question": "Quels prérequis sont nécessaires pour suivre cette formation ?",
+          "answer": "Une solide compréhension des concepts de base du cloud computing et une expérience pratique avec au moins un des principaux fournisseurs de cloud (AWS, Azure, GCP)."
+        },
+        {
+          "question": "Quelles sont les compétences attendues ?",
+          "answer": "Connaissances en sécurité cloud, compétences en gestion de la sécurité, connaissances en architecture cloud, connaissances en chiffrement et en cryptographie."
+        },
+        {
+          "question": "Quelle est la durée de la formation ?",
+          "answer": "4 jours"
+        }
+      ]
     }
   ]
 }
