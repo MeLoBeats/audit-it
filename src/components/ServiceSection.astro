@@ -12,7 +12,7 @@ const servicesTitle = useContent("servicesTitle")
 
 <section
   id="services"
-  class="w-full bg-gradient-to-t from-60% from-white to-[#fcf3ff] mt-[250px] pb-14 px-5"
+  class="w-full bg-gradient-to-t from-20% from-white to-[#fcf3ff] mt-[250px] pt-14 pb-14 px-5"
 >
   <div class="flex flex-col h-full w-full gap-5 pt-4">
     <h1
@@ -24,13 +24,14 @@ const servicesTitle = useContent("servicesTitle")
         </GradientText>
       </FadeIn>
     </h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div class="grid grid-cols- w-full px-40 relative mx-auto gap-20 line">
       {
         services.map((service) => (
           <motion.div
             key={service.title}
             initial={{ opacity: 0, x: -20, y: 20 }}
             client:visible
+            className="z-10 w-full h-full py-2"
             animate={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.1 }}
@@ -42,3 +43,10 @@ const servicesTitle = useContent("servicesTitle")
     </div>
   </div>
 </section>
+
+<style>
+  .line::after {
+    content: "";
+    position: absolute;
+  }
+</style>

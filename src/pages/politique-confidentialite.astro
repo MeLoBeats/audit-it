@@ -1,0 +1,145 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import useContent from "@/utils/useContent"
+import GradientText from "@/components/ui/gradient-text"
+
+const title = useContent("global.title") as string
+---
+
+<BaseLayout
+  breadcrumbs={[
+    { title: "Accueil", href: "/" },
+    {
+      title: "Politique de confidentialité",
+      href: "/politique-confidentialite",
+    },
+  ]}
+>
+  <section class="py-10 lg:py-14 w-full min-h-[calc(80vh-80px)] bg-transparent">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl sm:text-5xl xl:text-6xl font-bold text-black mb-8">
+        Politique de confidentialité de <GradientText>{title}</GradientText>
+      </h1>
+
+      <div class="space-y-10">
+        <div>
+          <h2 class="text-2xl font-bold mb-4">
+            1. Collecte des données personnelles
+          </h2>
+          <p>
+            StockData collecte les données personnelles suivantes via son
+            formulaire de contact :
+          </p>
+          <ul class="list-disc list-inside ml-4">
+            <li>Nom</li>
+            <li>Adresse e-mail</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">2. Utilisation des données</h2>
+          <p>
+            Les données collectées sont utilisées uniquement dans le but de
+            répondre aux demandes de renseignements et de devis des
+            utilisateurs.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">3. Partage des données</h2>
+          <p>
+            StockData utilise un service tiers de gestion d'envoi d'e-mails pour
+            traiter et envoyer les réponses aux demandes des utilisateurs. Ce
+            prestataire agit en tant que sous-traitant et est tenu de respecter
+            la confidentialité et la sécurité des données conformément au RGPD.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">
+            4. Cookies et technologies similaires
+          </h2>
+          <p>Le site web de StockData n'utilise pas de cookies.</p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">5. Droits des utilisateurs</h2>
+          <p>
+            Conformément au RGPD, les utilisateurs disposent des droits suivants
+            concernant leurs données personnelles :
+          </p>
+          <ul class="list-disc list-inside ml-4">
+            <li>Droit d'accès</li>
+            <li>Droit de rectification</li>
+            <li>Droit à l'effacement (droit à l'oubli)</li>
+            <li>Droit à la limitation du traitement</li>
+            <li>Droit à la portabilité des données</li>
+            <li>Droit d'opposition</li>
+          </ul>
+          <p class="mt-4">
+            Pour exercer ces droits ou pour toute question relative à la
+            protection de vos données, veuillez contacter notre Délégué à la
+            Protection des Données à l'adresse suivante : dpo@stockdata.fr
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">6. Sécurité des données</h2>
+          <p>
+            StockData met en œuvre des mesures de sécurité pour protéger vos
+            données personnelles, notamment l'utilisation du protocole HTTPS
+            pour sécuriser la transmission des données sur notre site web.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">7. Conservation des données</h2>
+          <p>
+            Les données personnelles sont conservées jusqu'à ce que
+            l'utilisateur demande leur suppression.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">8. Utilisateurs mineurs</h2>
+          <p>
+            Les services de StockData sont principalement destinés aux
+            entreprises et ne sont pas conçus pour être utilisés par des
+            mineurs.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">
+            9. Transfert de données hors UE
+          </h2>
+          <p>
+            StockData ne transfère pas de données personnelles en dehors de
+            l'Union Européenne.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">
+            10. Modifications de la politique de confidentialité
+          </h2>
+          <p>
+            StockData se réserve le droit de modifier cette politique de
+            confidentialité à tout moment. Les utilisateurs seront informés de
+            tout changement important par le biais de notre site web ou par
+            e-mail.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">11. Contact</h2>
+          <p>
+            Pour toute question concernant cette politique de confidentialité ou
+            vos données personnelles, veuillez nous contacter à l'adresse
+            suivante : dpo@stockdata.fr
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

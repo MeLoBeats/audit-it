@@ -5,16 +5,16 @@
   "navbar": {
     "items": [
       {
-        "title": "Services",
+        "title": "Service",
         "link": "#services"
       },
       {
         "title": "Formations",
-        "link": "#formations"
+        "link": "formations"
       },
       {
         "title": "A propos",
-        "link": "#a-propos"
+        "link": "a-propos"
       }
     ]
   },
@@ -29,27 +29,32 @@
     {
       "icon": "Database",
       "title": "Externalisation de Backup",
-      "description": "Des solutions de sauvegarde fiables et sécurisées pour vos données critiques."
+      "description": "Des solutions de sauvegarde fiables et sécurisées pour vos données critiques.",
+      "longDescription": "Notre service d'externalisation de backup offre une protection robuste pour vos données essentielles. Nous utilisons des technologies de pointe pour assurer des sauvegardes régulières, automatisées et cryptées de vos informations vitales. Nos solutions s'adaptent à vos besoins spécifiques, qu'il s'agisse de sauvegardes incrémentales quotidiennes ou de plans de reprise après sinistre complets. Avec des options de stockage redondant et géographiquement distribué, nous garantissons que vos données restent accessibles et récupérables, même face aux scénarios les plus critiques. Notre équipe d'experts surveille en permanence l'intégrité de vos sauvegardes et est prête à intervenir rapidement en cas de besoin."
     },
     {
       "icon": "CloudCog",
       "title": "Migration Cloud",
-      "description": "Une transition fluide de vos données vers le cloud avec une expertise en Azure et AWS."
+      "description": "Une transition fluide de vos données vers le cloud avec une expertise en Azure et AWS.",
+      "longDescription": "Notre service de migration cloud vous guide à travers chaque étape de votre transition vers des infrastructures Azure ou AWS. Nous commençons par une évaluation approfondie de votre environnement actuel, identifiant les opportunités d'optimisation et les défis potentiels. Notre équipe élabore ensuite une stratégie de migration sur mesure, minimisant les perturbations de vos opérations quotidiennes. Nous gérons la migration proprement dite avec des outils avancés, assurant l'intégrité et la sécurité de vos données tout au long du processus. Post-migration, nous optimisons votre nouvelle infrastructure cloud pour maximiser les performances et minimiser les coûts. Notre approche holistique garantit non seulement une transition technique réussie, mais aussi l'adoption et la maîtrise des nouvelles technologies par votre équipe."
     },
     {
       "icon": "ShieldCheck",
       "title": "Cybersécurité & Pentest",
-      "description": "Protégez vos actifs numériques avec des audits de sécurité et des tests d'intrusion avancés."
+      "description": "Protégez vos actifs numériques avec des audits de sécurité et des tests d'intrusion avancés.",
+      "longDescription": "Notre service de cybersécurité et pentest offre une protection complète pour votre infrastructure numérique. Nos experts en sécurité utilisent des techniques de pointe pour simuler des attaques réelles, identifiant les vulnérabilités avant qu'elles ne puissent être exploitées par des acteurs malveillants. Nous effectuons des audits approfondis de votre réseau, de vos applications et de vos processus, fournissant un rapport détaillé des risques identifiés et des recommandations précises pour y remédier. Notre approche va au-delà des simples scans automatisés, en incorporant des techniques manuelles avancées pour découvrir des failles subtiles souvent négligées. Nous proposons également des formations de sensibilisation à la sécurité pour vos employés, renforçant ainsi votre première ligne de défense contre les cybermenaces."
     },
     {
       "icon": "Server",
       "title": "Mise en place de Landing Zone Cloud",
-      "description": "Créez des environnements cloud sécurisés et scalables dès la base."
+      "description": "Créez des environnements cloud sécurisés et scalables dès la base.",
+      "longDescription": "Notre service de mise en place de Landing Zone Cloud établit les fondations solides nécessaires pour une adoption réussie du cloud à l'échelle de l'entreprise. Nous concevons et implémentons une architecture cloud robuste qui adhère aux meilleures pratiques de sécurité, de conformité et d'efficacité opérationnelle. Cette Landing Zone sert de modèle réplicable pour le déploiement cohérent de vos applications et services. Nous mettons en place des contrôles d'accès granulaires, des politiques de sécurité strictes et des mécanismes de gouvernance adaptés à vos besoins spécifiques. Notre approche inclut également l'établissement de processus automatisés pour la gestion des ressources, la surveillance et l'optimisation des coûts. Avec une Landing Zone bien conçue, votre organisation bénéficie d'un environnement cloud évolutif, sécurisé et prêt à soutenir votre croissance future."
     },
     {
       "icon": "Lock",
       "title": "Services Clouds Managés",
-      "description": "Supervision, gestion des incidents, automatisation des tâches, et optimisation continue pour garantir la performance de votre SI."
+      "description": "Supervision, gestion des incidents, automatisation des tâches, et optimisation continue pour garantir la performance de votre SI.",
+      "longDescription": "Nos Services Clouds Managés offrent une gestion complète et proactive de votre infrastructure cloud. Notre équipe d'experts surveille en permanence vos systèmes, anticipant et résolvant les problèmes avant qu'ils n'impactent vos opérations. Nous mettons en place des systèmes d'alerte sophistiqués et des procédures de réponse rapide pour gérer efficacement tout incident. L'automatisation est au cœur de notre approche, permettant d'optimiser les tâches routinières, de réduire les erreurs humaines et d'améliorer l'efficacité globale. Nous effectuons régulièrement des audits de performance et de sécurité, proposant des optimisations continues pour améliorer les performances et réduire les coûts. Notre service inclut également des rapports détaillés et des recommandations stratégiques pour aligner votre infrastructure cloud avec vos objectifs commerciaux à long terme."
     }
   ],
   "formationsTitle": "Nos formations",
@@ -273,6 +278,38 @@
           "answer": "4 jours"
         }
       ]
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "StockData a révolutionné notre approche de l'analyse de marché. Leurs données précises et à jour nous permettent de prendre des décisions éclairées rapidement.",
+      "imgSrc": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "name": "Sophie Martin",
+      "role": "Directrice Financière"
+    },
+    {
+      "quote": "En tant que start-up, l'accès à des données fiables était crucial. StockData nous a fourni exactement ce dont nous avions besoin pour croître et attirer des investisseurs.",
+      "imgSrc": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "name": "Thomas Dubois",
+      "role": "Fondateur & CEO"
+    },
+    {
+      "quote": "La facilité d'utilisation de StockData est impressionnante. Même nos employés les moins techniques peuvent extraire des informations précieuses en quelques clics.",
+      "imgSrc": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
+      "name": "Marie Leclerc",
+      "role": "Responsable RH"
+    },
+    {
+      "quote": "Les insights fournis par StockData ont été essentiels pour notre expansion sur de nouveaux marchés. C'est un outil indispensable pour toute entreprise ambitieuse.",
+      "imgSrc": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "name": "Pierre Moreau",
+      "role": "Directeur Marketing"
+    },
+    {
+      "quote": "La qualité et la diversité des données offertes par StockData sont inégalées. Cela nous a permis d'optimiser nos stratégies d'investissement de manière significative.",
+      "imgSrc": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "name": "Émilie Rousseau",
+      "role": "Analyste Financière Senior"
     }
   ]
 }

@@ -1,0 +1,66 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import useContent from "@/utils/useContent"
+import GradientText from "@/components/ui/gradient-text"
+
+const title = useContent("global.title") as string
+---
+
+<BaseLayout
+  breadcrumbs={[
+    { title: "Accueil", href: "/" },
+    { title: "Mentions légales", href: "/mentions-legales" },
+  ]}
+>
+  <section class="py-10 lg:py-14 w-full min-h-[calc(80vh-80px)] bg-transparent">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl sm:text-5xl xl:text-6xl font-bold text-black mb-8">
+        Mentions légales de <GradientText>{title}</GradientText>
+      </h1>
+
+      <div class="space-y-10">
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Éditeur du site</h2>
+          <p><strong>{title}</strong> est édité par :</p>
+          <p>StockData SAS</p>
+          <p>123 Rue de la Data, 75000 Paris</p>
+          <p>RCS Paris B 123 456 789</p>
+          <p>Capital social : 100 000 €</p>
+          <p>Directeur de la publication : Yasar ALTAF</p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Hébergement</h2>
+          <p>Le site {title} est hébergé par :</p>
+          <p>Azure</p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Propriété intellectuelle</h2>
+          <p>
+            L'ensemble du contenu de ce site (textes, images, vidéos, etc.) est
+            protégé par le droit d'auteur. Toute reproduction ou représentation,
+            intégrale ou partielle, par quelque procédé que ce soit, faite sans
+            le consentement préalable et écrit de StockData SAS, est illicite et
+            constitue une contrefaçon sanctionnée par le Code de la propriété
+            intellectuelle.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">
+            Protection des données personnelles
+          </h2>
+          <p>
+            Conformément au Règlement Général sur la Protection des Données
+            (RGPD), vous disposez d'un droit d'accès, de rectification,
+            d'effacement, de limitation, d'opposition et de portabilité de vos
+            données personnelles. Pour exercer ces droits ou pour toute question
+            sur le traitement de vos données, vous pouvez nous contacter à
+            l'adresse : dpo@stockdata.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

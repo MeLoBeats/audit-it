@@ -1,26 +1,50 @@
-// import AppLogo from "./AppLogo.astro"
+import React, { useState, useEffect } from "react"
 import { Button } from "../ui/button"
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
 import useContent from "../../utils/useContent"
-import { useCallback, useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 
 const title = useContent("global.title")
 const navbar = useContent("navbar")
 
 export const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY > 100) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setIsVisible(false)
+      } else {
+        // Scrolling up
+        setIsVisible(true)
+      }
+
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [lastScrollY])
+
   return (
     <header
       className={cn(
-        "w-full py-5 h-20 px-24 bg-transparent transition-colors duration-300"
+        "w-full py-5 h-20 px-24 z-20 sticky top-0 transition-all duration-300",
+        isScrolled ? "bg-white shadow-md" : "bg-transparent",
+        isVisible ? "translate-y-0" : "-translate-y-full"
       )}
     >
       <div className="flex items-center justify-between">
@@ -34,16 +58,18 @@ export const Header = () => {
         <nav className="flex-1 flex justify-center">
           <div className="flex items-center gap-10">
             {navbar.items.map((item: { title: string; link: string }) => (
-              <a key={item.title} href={item.link}>
+              <a key={item.title} href={"/" + item.link}>
                 <Button variant={"link"}>{item.title}</Button>
               </a>
             ))}
           </div>
         </nav>
         <div className="flex-1 flex justify-end">
-          <Button variant="default" size="lg">
-            Nous contacter
-          </Button>
+          <a href="/#contact">
+            <Button variant="default" size="lg">
+              Nous contacter
+            </Button>
+          </a>
         </div>
       </div>
     </header>

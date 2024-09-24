@@ -1,0 +1,112 @@
+---
+import FadeIn from "@/components/react/FadeIn"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import GradientText from "@/components/ui/gradient-text"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import useContent from "@/utils/useContent"
+import { motion } from "framer-motion"
+import TestimonialSlider from "@/components/ui/testimonials-slider"
+import type { Testimonial } from "index"
+
+const title = useContent("global.title") as string
+const testimonials = useContent("testimonials") as Testimonial[]
+---
+
+<BaseLayout
+  breadcrumbs={[
+    { title: "Accueil", href: "/" },
+    { title: "A propos", href: "/a-propos" },
+  ]}
+>
+  <section
+    class="flex flex-col pt-10 pb-20 lg:pt-14 items-center w-full min-h-[calc(80vh-80px)] bg-transparent"
+  >
+    <div class="flex flex-col items-center w-1/2 px-4">
+      <h1
+        class="text-center text-4xl sm:text-5xl xl:text-6xl font-bold text-black"
+      >
+        <FadeIn client:load>
+          A propos de <GradientText>{title}</GradientText>
+        </FadeIn>
+      </h1>
+      <p
+        class="text-center text-base sm:text-lg md:text-xl mt-5 font-normal text-black max-w-2xl"
+      >
+        <FadeIn client:load duration={0.5}
+          >StockData est un leader innovant dans le domaine du stockage de
+          données, offrant des solutions de pointe pour les entreprises et les
+          organisations gouvernementales.</FadeIn
+        >
+      </p>
+      <div class="mt-20 flex flex-col items-center gap-10">
+        <motion.div
+          initial={{ opacity: 0, x: -20, y: 20 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          client:load
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, delay: 0.2 }}
+        >
+          <Card>
+            <CardHeader>
+              <CardTitle>Qui sommes-nous ?</CardTitle>
+            </CardHeader>
+            <CardContent>
+              Chez StockData, notre mission est de transformer la gestion des
+              données en fournissant des solutions de stockage sécurisées,
+              efficaces et évolutives. Nous nous efforçons d'optimiser la valeur
+              des données de nos clients tout en garantissant leur intégrité et
+              leur accessibilité.
+            </CardContent>
+          </Card>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -20, y: 20 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          client:load
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, delay: 0.3 }}
+        >
+          <Card>
+            <CardHeader>
+              <CardTitle>Notre mission</CardTitle>
+            </CardHeader>
+            <CardContent>
+              Chez StockData, notre mission est de transformer la gestion des
+              données en fournissant des solutions de stockage sécurisées,
+              efficaces et évolutives. Nous nous efforçons d'optimiser la valeur
+              des données de nos clients tout en garantissant leur intégrité et
+              leur accessibilité.
+            </CardContent>
+          </Card>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -20, y: 20 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          client:load
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, delay: 0.4 }}
+        >
+          <Card>
+            <CardHeader>
+              <CardTitle>Notre équipe</CardTitle>
+            </CardHeader>
+            <CardContent>
+              Notre équipe est composée d'experts passionnés en technologie, en
+              sécurité des données et en service client. Nous sommes dédiés à
+              l'innovation continue et à l'excellence dans tout ce que nous
+              faisons.
+            </CardContent>
+          </Card>
+        </motion.div>
+      </div>
+      <div class="py-20">
+        <h1
+          class="text-2xl my-5 sm:text-4xl text-center mb-14 font-bold text-black"
+        >
+          <FadeIn client:load> Ils nous font confiance </FadeIn>
+        </h1>
+        <TestimonialSlider client:load testimonials={testimonials} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

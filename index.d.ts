@@ -9,6 +9,7 @@ export type Service = {
     icon: icons;
     title: string;
     description: string;
+    longDescription: string;
 }
 
 export type Formation = {
@@ -26,3 +27,10 @@ export type Faq = {
     question: string;
     answer: string;
 }
+
+export type Testimonial = {
+    quote: string;
+    name: string;
+    role: string;
+    imgSrc: string;
+  };
