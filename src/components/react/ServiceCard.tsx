@@ -23,9 +23,13 @@ export const ServiceCard = ({ service }: { service: Service }) => {
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col items-center justify-center">
-        {/* <Icon name={service.icon} size={48} /> */}
-        <p className="text-lg text-black">{service.longDescription}</p>
+        {/* <p className="text-lg text-black">{service.longDescription}</p> */}
       </CardContent>
+      <CardFooter>
+        <Button variant="default" className="w-full">
+          En savoir plus
+        </Button>
+      </CardFooter>
     </Card>
   )
 }
