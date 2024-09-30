@@ -315,5 +315,25 @@
       "name": "Émilie Rousseau",
       "role": "Analyste Financière Senior"
     }
+  ],
+  "jobOffers": [
+    {
+      "title": "Développeur Full Stack",
+      "description": "Concevoir et développer des applications web robustes, collaborer avec l'équipe produit pour implémenter de nouvelles fonctionnalités, et optimiser les performances des applications existantes.",
+      "location": "Lyon",
+      "type": "Temps plein"
+    },
+    {
+      "title": "Ingénieur DevOps",
+      "description": "Automatiser les processus de déploiement, gérer l'infrastructure cloud, améliorer la surveillance des systèmes et collaborer avec les équipes de développement pour optimiser les cycles de livraison.",
+      "location": "Marseille",
+      "type": "Temps partiel"
+    },
+    {
+      "title": "Développeur Mobile",
+      "description": "Créer des applications mobiles innovantes pour iOS et Android, participer à la conception UX/UI, intégrer des API tierces et assurer la maintenance des applications existantes.",
+      "location": "Toulouse",
+      "type": "Freelance"
+    }
   ]
 }

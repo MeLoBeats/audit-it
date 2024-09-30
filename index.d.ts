@@ -34,3 +34,10 @@ export type Testimonial = {
     role: string;
     imgSrc: string;
   };
+
+  export type Job = {
+    title: string;
+    description: string;
+    location: string;
+    type: string;
+  }

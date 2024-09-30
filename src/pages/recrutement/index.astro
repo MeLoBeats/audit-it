@@ -1,0 +1,74 @@
+---
+import JobCard from "@/components/JobCard.astro"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import GradientText from "@/components/ui/gradient-text"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import useContent from "@/utils/useContent"
+import type { Job } from "index"
+
+const title = useContent("global.title")
+const jobs = useContent("jobOffers") as Job[]
+---
+
+<BaseLayout
+  breadcrumbs={[
+    { title: "Accueil", href: "/" },
+    { title: "Recrutement", href: "/recrutement" },
+  ]}
+>
+  <div class="container mx-auto w-full mb-20">
+    <div class="flex flex-col items-center mb-14 justify-center">
+      <h1 class="text-3xl my-5 sm:text-4xl text-center font-bold text-black">
+        Recrutement chez <GradientText>{title}</GradientText>
+      </h1>
+      <p class="text-lg text-center text-gray-600 w-1/2 mb-10">
+        Rejoignez notre équipe innovante et contribuez à transformer la gestion
+        des données pour les entreprises et les organisations gouvernementales.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+      <Card>
+        <CardHeader>
+          <CardTitle>Nos opportunités</CardTitle>
+        </CardHeader>
+        <CardContent>
+          Découvrez nos postes ouverts dans les domaines de la technologie, de
+          la sécurité des données et du service client. Nous recherchons des
+          talents passionnés et innovants.
+        </CardContent>
+      </Card>
+      <Card>
+        <CardHeader>
+          <CardTitle>Nos opportunités</CardTitle>
+        </CardHeader>
+        <CardContent>
+          Découvrez nos postes ouverts dans les domaines de la technologie, de
+          la sécurité des données et du service client. Nous recherchons des
+          talents passionnés et innovants.
+        </CardContent>
+      </Card>
+      <Card>
+        <CardHeader>
+          <CardTitle>Nos opportunités</CardTitle>
+        </CardHeader>
+        <CardContent>
+          Découvrez nos postes ouverts dans les domaines de la technologie, de
+          la sécurité des données et du service client. Nous recherchons des
+          talents passionnés et innovants.
+        </CardContent>
+      </Card>
+    </div>
+
+    <!-- Offres d'emploi -->
+    <div class="w-full flex flex-col items-center justify-center mt-20">
+      <h2 class="text-2xl my-5 sm:text-4xl text-center font-bold text-black">
+        Nos Offres d'emploi
+      </h2>
+      <div class="w-full grid grid-cols-1 lg:grid-cols-2 mt-14 gap-8">
+        {jobs.map((job) => <JobCard {...job} />)}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

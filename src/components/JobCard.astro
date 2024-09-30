@@ -1,0 +1,28 @@
+---
+import type { Job } from "index"
+import { Button } from "./ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card"
+
+const { title, description, location, type } = Astro.props as Job
+---
+
+<Card>
+  <CardHeader>
+    <CardTitle className="text-2xl font-bold text-black">{title}</CardTitle>
+    <CardDescription className="text-base">{description}</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p>Lieu : {location}</p>
+    <p>Type : {type}</p>
+  </CardContent>
+  <CardFooter>
+    <Button variant="secondary" className="w-full"> Voir l'offre </Button>
+  </CardFooter>
+</Card>
